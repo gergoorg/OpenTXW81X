@@ -11,7 +11,7 @@
 SENSOR_INIT_SECTION static const unsigned char SP0828InitTable[CMOS_INIT_LEN]=
 {
 	0xfd,0x00,
-	0x1c,0x01,
+	0x1c,0x00,
 	0x30,0x00,
 	0x0f,0x2f,
 	0x10,0x2f,
@@ -259,7 +259,7 @@ SENSOR_OP_SECTION const _Sensor_Adpt_ sp0828_cmd=
 	.pixelh= 320,
 	.hsyn = 1,
 	.vsyn = 1,
-	.rduline = 0,
+	.rduline = 1,
 	.rawwide = 1,//10bit
 	.colrarray = 2,//0:_RGRG_ 1:_GRGR_,2:_BGBG_,3:_GBGB_
 	.init = (uint8 *)SP0828InitTable,
